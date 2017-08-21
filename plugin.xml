@@ -9,7 +9,7 @@
   <description>Continuously recognizes speech input</description>
   <license>Apache 2.0</license>
   
-  <js-module src="www/continuoussr.js" name="continuoussr">
+  <js-module src="www/continuoussr.js" name="SpeechRecognizer">
     <clobbers target="continuoussr" /> 
   </js-module>
   
