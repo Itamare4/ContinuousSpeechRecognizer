@@ -1,4 +1,4 @@
-package com.latin.continuoussr;
+package org.apache.cordova.continuoussr;
 
 import java.util.List;
 
