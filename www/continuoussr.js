@@ -17,7 +17,7 @@
 /**
  * constructor
  */
-function ContinuousSpeechRecognizer() {
+function SpeechRecognizer() {
 }
 
 /**
@@ -29,8 +29,8 @@ function ContinuousSpeechRecognizer() {
  * @param maxMatches The maximum number of matches to return. 0 means the service decides how many to return.
  * @param promptString An optional string to prompt the user during recognition
  */
-ContinuousSpeechRecognizer.prototype.startRecognize = function(successCallback, errorCallback, maxMatches, promptString, language) {
-    return cordova.exec(successCallback, errorCallback, "ContinuousSpeechRecognizer", "startRecognize", [maxMatches, language]);
+SpeechRecognizer.prototype.startRecognize = function(successCallback, errorCallback, maxMatches, promptString, language) {
+    return cordova.exec(successCallback, errorCallback, "SpeechRecognizer", "startRecognize", [maxMatches, promptString, language]);
 };
 
 /**
@@ -41,12 +41,23 @@ ContinuousSpeechRecognizer.prototype.startRecognize = function(successCallback, 
  *
  * Returns an array of codes in the success callback
  */
-ContinuousSpeechRecognizer.prototype.getSupportedLanguages = function(successCallback, errorCallback) {
-    return cordova.exec(successCallback, errorCallback, "ContinuousSpeechRecognizer", "getSupportedLanguages", []);
+SpeechRecognizer.prototype.getSupportedLanguages = function(successCallback, errorCallback) {
+    return cordova.exec(successCallback, errorCallback, "SpeechRecognizer", "getSupportedLanguages", []);
+};
+
+/**
+ * Get the list of the supported languages in IETF BCP 47 format
+ *
+ * @param successCallback
+ * @param errorCallback
+ *
+ * Return a String message with the result
+ */
+SpeechRecognizer.prototype.checkSpeechRecognition = function(successCallback, errorCallback) {
+    return cordova.exec(successCallback, errorCallback, "SpeechRecognizer", "checkSpeechRecognition", []);
 };
 
 /**
  * Export
  */
-module.exports = new ContinuousSpeechRecognizer();
-
+module.exports = new SpeechRecognizer();
