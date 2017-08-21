@@ -1,0 +1,36 @@
+{
+  "name": "ContSpeechRecognizer",
+  "version": "1.0.0",
+  "description": "Continous Recognizes speech input",
+  "cordova": {
+    "id": "cordova-plugin-continuoussr",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Itamare4/ContinuousSpeechRecognizer.git"
+  },
+  "keywords": [
+    "cordova",
+    "speech",
+    "recognizer",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Diego Alvarado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Itamare4/ContinuousSpeechRecognizer.git"
+  },
+  "homepage": "https://github.com/Itamare4/ContinuousSpeechRecognizer#readme"
+}
